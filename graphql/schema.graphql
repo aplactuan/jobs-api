@@ -29,6 +29,9 @@ type User {
     id: ID!
     name: String!
     email: String!
+    jobs(
+        orderBy: _ @orderBy(columns: ["created_at"])
+    ): [Job!]! @hasMany
     created_at: DateTime!
     updated_at: DateTime!
 }
