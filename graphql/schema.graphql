@@ -102,4 +102,5 @@ type Mutation {
         @inject(context: "user.id", name: "user_id")
 
     updateJob(id: ID!, input: UpdateJobInput! @spread): Job! @update @can(ability: "update", find: "id")
+    deleteJob(id: ID!): Job! @delete @can(ability: "update", find: "id")
 }
