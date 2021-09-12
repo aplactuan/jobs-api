@@ -11,6 +11,10 @@ class Job extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'user_id'
+    ];
+
     public function tags() : BelongsToMany
     {
         return $this->belongsToMany(Tag::class);
